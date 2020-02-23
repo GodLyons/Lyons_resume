@@ -7,3 +7,13 @@ export interface initState {
 export interface HomeProps extends initState {
   [propName: string]: any
 }
+// nav-bar
+export interface navState {
+  name: string,
+  active: boolean
+}
+// redux
+export interface reduxAction {
+  type: string,
+  text: string | number
+}

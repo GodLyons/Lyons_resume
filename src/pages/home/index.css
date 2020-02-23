@@ -1,4 +1,5 @@
 .home-index {
+  position: relative;
   overflow: hidden;
   animation: bgi 5s linear infinite alternate;
   color: #57626f;
@@ -41,7 +42,7 @@
   border: 1px solid #2c3e50;
 }
 .home-img {
-  position: fixed;
+  position: absolute;
   right: 0;
   top: 0;
   cursor: pointer;

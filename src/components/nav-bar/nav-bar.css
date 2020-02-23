@@ -1,0 +1,27 @@
+.nav-bar {
+  overflow: hidden;
+  padding: 0 150px;
+  height: 70px;
+  line-height: 70px;
+  background-color: #2c3e50;
+  color: #fff;
+}
+.nav-logo {
+  float: left;
+}
+.nav-list {
+  float: right;
+}
+.nav-item {
+  display: inline-block;
+  padding: 0 50px;
+  cursor: pointer;
+}
+.active {
+  color: #E87E04;
+}
+.fixed {
+  position: fixed;
+  width: 100%;
+  top: 0
+}

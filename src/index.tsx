@@ -6,6 +6,7 @@ import * as serviceWorker from './serviceWorker';
 import {Provider} from 'react-redux'
 import { store } from './store/store'
 import 'antd/dist/antd.css'
+import 'util/scroll'
 
 ReactDOM.render(
     <Provider store={store}>
