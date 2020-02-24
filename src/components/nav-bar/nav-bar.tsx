@@ -2,11 +2,10 @@ import React from 'react'
 import './nav-bar.css'
 import { navState } from '../../type'
 import {connect} from 'react-redux'
-import {Anchor} from 'antd'
-const {Link} = Anchor
 
 interface navProp {
   page: number,
+  screenHeight: number,
   dispatch: any
 }
 
@@ -21,12 +20,18 @@ const NavBar: React.FC<navProp> = (prop) => {
   if (prop.page > 0) {
     initState[prop.page - 1].active = true
   }
+  const toPage = (page: number): void => {
+    document.documentElement.scrollTop = page * prop.screenHeight
+  }
   return (
     <div className={`nav-bar ${prop.page > 0 ? 'fixed' : ''}`}>
       <div className="nav-logo">Lyons简历</div>
       <div className="nav-list">
         {initState.map((item: navState, index: number) => (
-          <div className={`nav-item ${item.active ? 'active' : ''}`} key={index}>{item.name}</div>
+          <div
+            className={`nav-item ${item.active ? 'active' : ''}`}
+            key={index}
+            onClick={() => toPage(index + 1)}>{item.name}</div>
         ))}
       </div>
     </div>
