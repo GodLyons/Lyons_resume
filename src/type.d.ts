@@ -17,3 +17,12 @@ export interface reduxAction {
   type: string,
   text: string | number
 }
+// page-title
+export interface titleProps {
+  inprop: boolean,
+  [propName: string]: any
+}
+// page
+export interface pageProps {
+  page: number
+}

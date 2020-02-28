@@ -1,5 +1,7 @@
 .nav-bar {
-  overflow: hidden;
+  /* overflow: hidden; */
+  position: sticky;
+  top: 0;
   padding: 0 150px;
   height: 70px;
   line-height: 70px;
@@ -19,9 +21,4 @@
 }
 .active {
   color: #E87E04;
-}
-.fixed {
-  position: fixed;
-  width: 100%;
-  top: 0
 }

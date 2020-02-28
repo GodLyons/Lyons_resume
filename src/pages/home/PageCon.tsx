@@ -1,17 +1,14 @@
 import React from 'react'
-import Nav from 'components/nav-bar/nav-bar'
 import {connect} from 'react-redux'
 import { initState, HomeProps } from '../../type'
 
-const { NavBarInstead} = Nav
-
 const PageCon: React.FC<HomeProps> = (prop) => {
+  console.log(prop.page)
   let style = {
-    height: prop.screenHeight - 70
+    height: prop.screenHeight
   }
   return (
     <div>
-      {prop.page > 0 && <NavBarInstead></NavBarInstead>}
       <div style={style}>
         {prop.children}
       </div>

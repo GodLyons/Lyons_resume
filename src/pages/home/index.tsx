@@ -6,6 +6,9 @@ import './index.css'
 import Nav from 'components/nav-bar/nav-bar'
 import PageCon from './PageCon'
 import {BackTop} from 'antd'
+import Pages from './AboutMe'
+
+const {JobIntention, AboutMe, MyProject, MySkill, ConnectMe} = Pages
 
 const Home: React.FC<HomeProps> = (prop) => {
   console.log(prop)
@@ -40,11 +43,21 @@ const Home: React.FC<HomeProps> = (prop) => {
 
     <Nav.NavBar screenHeight={prop.screenHeight}></Nav.NavBar>
 
-    <PageCon>1</PageCon>
-    <PageCon>2</PageCon>
-    <PageCon>3</PageCon>
-    <PageCon>4</PageCon>
-    <PageCon>54</PageCon>
+    <PageCon>
+      <AboutMe page={prop.page}></AboutMe>
+    </PageCon>
+    <PageCon>
+      <JobIntention page={prop.page}></JobIntention>
+    </PageCon>
+    <PageCon>
+      <MyProject page={prop.page}></MyProject>
+    </PageCon>
+    <PageCon>
+      <MySkill page={prop.page}></MySkill>
+    </PageCon>
+    <PageCon>
+      <ConnectMe page={prop.page}></ConnectMe>
+    </PageCon>
     </>
   )
 }

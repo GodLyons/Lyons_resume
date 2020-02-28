@@ -24,7 +24,8 @@ const NavBar: React.FC<navProp> = (prop) => {
     document.documentElement.scrollTop = page * prop.screenHeight
   }
   return (
-    <div className={`nav-bar ${prop.page > 0 ? 'fixed' : ''}`}>
+    // <div className={`nav-bar ${prop.page > 0 ? 'fixed' : ''}`}>
+    <div className="nav-bar">
       <div className="nav-logo">Lyons简历</div>
       <div className="nav-list">
         {initState.map((item: navState, index: number) => (
