@@ -15,7 +15,8 @@ const NavBar: React.FC<navProp> = (prop) => {
     {name: '求职意向', active: false, id: 'page2'},
     {name: '项目', active: false, id: 'page3'},
     {name: '技术掌握', active: false, id: 'page4'},
-    {name: '联系我', active: false, id: 'page5'}
+    {name: '我的经历', active: false, id: 'page5'},
+    {name: '联系我', active: false, id: 'page6'}
   ]
   if (prop.page > 0) {
     initState[prop.page - 1].active = true

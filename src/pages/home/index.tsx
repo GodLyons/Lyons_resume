@@ -8,7 +8,7 @@ import PageCon from './PageCon'
 import {BackTop} from 'antd'
 import Pages from './AboutMe'
 
-const {JobIntention, AboutMe, MyProject, MySkill, ConnectMe} = Pages
+const {JobIntention, AboutMe, MyProject, MySkill, ConnectMe, MyExperience} = Pages
 
 const Home: React.FC<HomeProps> = (prop) => {
   console.log(prop)
@@ -54,6 +54,9 @@ const Home: React.FC<HomeProps> = (prop) => {
     </PageCon>
     <PageCon>
       <MySkill page={prop.page}></MySkill>
+    </PageCon>
+    <PageCon>
+      <MyExperience page={prop.page}></MyExperience>
     </PageCon>
     <PageCon>
       <ConnectMe page={prop.page}></ConnectMe>
