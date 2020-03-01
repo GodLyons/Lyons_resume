@@ -26,3 +26,8 @@ export interface titleProps {
 export interface pageProps {
   page: number
 }
+export interface resType {
+  code: string,
+  data: any,
+  message: string
+}

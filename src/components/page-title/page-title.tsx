@@ -3,7 +3,6 @@ import { titleProps } from '../../type'
 import {Transition} from 'react-transition-group'
 
 const PageTitle: React.FC<titleProps> = (prop) => {
-  console.log(prop.inprop)
   const duration = 500
 
   const defaultStyle = {

@@ -3,9 +3,9 @@ import {connect} from 'react-redux'
 import { initState, HomeProps } from '../../type'
 
 const PageCon: React.FC<HomeProps> = (prop) => {
-  console.log(prop.page)
   let style = {
-    height: prop.screenHeight
+    height: prop.screenHeight,
+    overflow: 'hidden'
   }
   return (
     <div>

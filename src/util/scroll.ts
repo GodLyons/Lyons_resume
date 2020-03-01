@@ -7,7 +7,7 @@ try {
 
   window.onscroll = () => {
     // 页面滚动的高度
-    console.log(store.getState().wsReducer.page)
+    // console.log(store.getState().wsReducer.page)
     let top: number = document.documentElement.scrollTop
     let rest: number = top % screenHeight
     let page: number = (top - rest) / screenHeight

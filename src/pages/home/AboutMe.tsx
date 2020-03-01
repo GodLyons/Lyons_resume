@@ -1,7 +1,8 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import PageTitle from 'components/page-title/page-title'
 import {pageProps} from 'type'
 import './page.css'
+import api from 'api/home'
 
 const pageStyle = {
   paddingTop: 100,
@@ -15,18 +16,28 @@ const AboutMe: React.FC<pageProps> = prop => {
     height: 200,
     borderRadius: '50%'
   }
+  const [data, setData] = useState({
+    imgUrl: '',
+    info: []
+  })
+  useEffect(() => {
+    api.getAboutMe().then((res: any) => {
+      const {code, data} = res
+      if (code === '0') {
+        setData(data)
+      }
+    })
+  }, [])
+  const articles = data.info.map((item: string, index: number) => (
+    <article className="page-article" key={index}>{item}</article>
+  ))
   return (
     <div style={{
       textAlign: 'center',
       ...pageStyle}}>
       <PageTitle inprop={prop.page === 1}>关于我</PageTitle>
-      <img style = {imgStyle} src="http://img3.imgtn.bdimg.com/it/u=1268102386,1821594743&fm=11&gp=0.jpg" alt="头像"/>
-      <article>
-        我是Lyons，毕业于河南工业大学，。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。
-      </article>
-      <article>
-        我的兴趣爱好是唱跳 rap篮球。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。
-      </article>
+      <img style = {imgStyle} src={data.imgUrl} alt="头像"/>
+      {articles}
     </div>
   )
 }
